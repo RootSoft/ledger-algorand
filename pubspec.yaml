@@ -1,0 +1,26 @@
+name: ledger_algorand
+description: A Ledger App Plugin for the Algorand blockchain
+version: 0.0.1
+homepage: https://github.com/RootSoft/ledger-algorand
+repository: https://github.com/RootSoft/ledger-algorand
+issue_tracker: https://github.com/RootSoft/ledger-algorand/issues
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  ledger_flutter:
+    path: "../ledger-flutter"
+
+  algorand_dart: ^2.0.0-dev.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
