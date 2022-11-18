@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://www.ledger.com/">
-    <img src="https://algorand-developer-portal.tryprism.com/static/Posts/2020/08/18%2019:16/081820-ledger_nano.jpg?w=2220&cmd=resize_then_crop&height=1018&quality=70" />
+    <img src="https://algorand-developer-portal.tryprism.com/static/Posts/2020/08/18%2019:16/081820-ledger_nano.jpg?w=2220&cmd=resize_then_crop&height=1018&quality=70" width="600"/>
   </a>
 
 <h1 align="center">ledger-algorand</h1>
@@ -12,7 +12,7 @@
     <a href="https://pub.dev/documentation/ledger_algorand/latest/"><strong>« Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/RootSoft/ledger-ledger_algorand/issues">Report Bug</a>
+    <a href="https://github.com/RootSoft/ledger_algorand/issues">Report Bug</a>
     · <a href="https://github.com/RootSoft/ledger_algorand/issues">Request Feature</a>
     · <a href="https://pub.dev/packages/ledger_flutter">Ledger Flutter</a>
   </p>
