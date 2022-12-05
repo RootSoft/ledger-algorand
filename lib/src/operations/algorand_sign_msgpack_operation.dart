@@ -22,13 +22,20 @@ class AlgorandSignMsgPackOperation extends LedgerOperation<Uint8List> {
   });
 
   @override
-  Future<Uint8List> write(ByteDataWriter writer, int index, int mtu) async {
+  Future<List<Uint8List>> write(
+    ByteDataWriter writer,
+    int index,
+    int mtu,
+  ) async {
+    //final writer = ByteDataWriter();
+    final output = <Uint8List>[];
     var bytesRemaining = transaction.length + 0x04;
     var offset = 0;
     var p1 = p1FirstWithAccount;
     var p2 = p2More;
 
     while (bytesRemaining > 0) {
+      final writer = ByteDataWriter();
       final bytesRemainingWithHeader = bytesRemaining + headerSize;
       final packetSize = bytesRemainingWithHeader <= chunkSize
           ? bytesRemainingWithHeader
@@ -59,9 +66,10 @@ class AlgorandSignMsgPackOperation extends LedgerOperation<Uint8List> {
       offset += bytesToCopyLength;
 
       p1 = p1More;
+      output.add(writer.toBytes());
     }
 
-    return writer.toBytes();
+    return output;
   }
 
   @override

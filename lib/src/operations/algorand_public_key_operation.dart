@@ -13,7 +13,11 @@ class AlgorandPublicKeyOperation extends LedgerOperation<List<String>> {
   });
 
   @override
-  Future<Uint8List> write(ByteDataWriter writer, int index, int mtu) async {
+  Future<List<Uint8List>> write(
+    ByteDataWriter writer,
+    int index,
+    int mtu,
+  ) async {
     writer.writeUint8(0x80); // ALGORAND_CLA
     writer.writeUint8(0x03); // PUBLIC_KEY_INS
     writer.writeUint8(0x00); // P1_FIRST
@@ -22,7 +26,7 @@ class AlgorandPublicKeyOperation extends LedgerOperation<List<String>> {
 
     writer.writeUint32(accountIndex); // Account index as bytearray
 
-    return writer.toBytes();
+    return [writer.toBytes()];
   }
 
   @override
