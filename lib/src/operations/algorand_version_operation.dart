@@ -10,11 +10,7 @@ class AlgorandVersionOperation extends LedgerOperation<AlgorandVersion> {
   AlgorandVersionOperation();
 
   @override
-  Future<List<Uint8List>> write(
-    ByteDataWriter writer,
-    int index,
-    int mtu,
-  ) async {
+  Future<List<Uint8List>> write(ByteDataWriter writer) async {
     writer.writeUint8(0x80); // ALGORAND_CLA
     writer.writeUint8(0x00); // PUBLIC_KEY_INS
     writer.writeUint8(0x00); // P1_FIRST
@@ -25,11 +21,7 @@ class AlgorandVersionOperation extends LedgerOperation<AlgorandVersion> {
   }
 
   @override
-  Future<AlgorandVersion> read(
-    ByteDataReader reader,
-    int index,
-    int mtu,
-  ) async {
+  Future<AlgorandVersion> read(ByteDataReader reader) async {
     final testMode = reader.readUint8();
     final versionMajor = reader.readUint16();
     final versionMinor = reader.readUint16();

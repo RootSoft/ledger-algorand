@@ -22,11 +22,7 @@ class AlgorandSignMsgPackOperation extends LedgerOperation<Uint8List> {
   });
 
   @override
-  Future<List<Uint8List>> write(
-    ByteDataWriter writer,
-    int index,
-    int mtu,
-  ) async {
+  Future<List<Uint8List>> write(ByteDataWriter writer) async {
     //final writer = ByteDataWriter();
     final output = <Uint8List>[];
     var bytesRemaining = transaction.length + 0x04;
@@ -73,11 +69,7 @@ class AlgorandSignMsgPackOperation extends LedgerOperation<Uint8List> {
   }
 
   @override
-  Future<Uint8List> read(
-    ByteDataReader reader,
-    int index,
-    int mtu,
-  ) async {
+  Future<Uint8List> read(ByteDataReader reader) async {
     // Read the signature
     return reader.read(reader.remainingLength);
   }

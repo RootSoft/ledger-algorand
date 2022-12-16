@@ -26,7 +26,7 @@ class AlgorandLedgerApp extends LedgerApp {
 
   @override
   Future<AlgorandVersion> getVersion(LedgerDevice device) {
-    return ledger.sendRequest<AlgorandVersion>(
+    return ledger.sendOperation<AlgorandVersion>(
       device,
       AlgorandVersionOperation(),
     );
@@ -34,7 +34,7 @@ class AlgorandLedgerApp extends LedgerApp {
 
   @override
   Future<List<String>> getAccounts(LedgerDevice device) async {
-    return ledger.sendRequest<List<String>>(
+    return ledger.sendOperation<List<String>>(
       device,
       AlgorandPublicKeyOperation(accountIndex: accountIndex),
     );
@@ -45,7 +45,7 @@ class AlgorandLedgerApp extends LedgerApp {
     LedgerDevice device,
     Uint8List transaction,
   ) {
-    return ledger.sendRequest<Uint8List>(
+    return ledger.sendOperation<Uint8List>(
       device,
       AlgorandSignMsgPackOperation(
         accountIndex: accountIndex,
