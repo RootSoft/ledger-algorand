@@ -28,8 +28,7 @@ class AlgorandPublicKeyOperation extends LedgerOperation<List<String>> {
   @override
   Future<List<String>> read(ByteDataReader reader) async {
     return [
-      Address(publicKey: reader.read(reader.remainingLength - 2))
-          .encodedAddress,
+      Address(publicKey: reader.read(reader.remainingLength)).encodedAddress,
     ];
   }
 }
