@@ -18,10 +18,12 @@ class AlgorandLedgerApp extends LedgerApp {
   static const success = 0x8000;
 
   int accountIndex;
+  LedgerTransformer? transformer;
 
   AlgorandLedgerApp(
     super.ledger, {
     this.accountIndex = 0,
+    this.transformer = const AlgorandTransformer(),
   });
 
   @override
@@ -29,6 +31,7 @@ class AlgorandLedgerApp extends LedgerApp {
     return ledger.sendOperation<AlgorandVersion>(
       device,
       AlgorandVersionOperation(),
+      transformer: transformer,
     );
   }
 
@@ -37,6 +40,7 @@ class AlgorandLedgerApp extends LedgerApp {
     return ledger.sendOperation<List<String>>(
       device,
       AlgorandPublicKeyOperation(accountIndex: accountIndex),
+      transformer: transformer,
     );
   }
 
@@ -51,6 +55,7 @@ class AlgorandLedgerApp extends LedgerApp {
         accountIndex: accountIndex,
         transaction: transaction,
       ),
+      transformer: transformer,
     );
   }
 
