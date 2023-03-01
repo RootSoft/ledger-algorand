@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:ledger_flutter/ledger.dart';
+import 'package:ledger_flutter/ledger_flutter.dart';
 
 /// APDU Protocol
 /// https://github.com/LedgerHQ/app-algorand/blob/develop/docs/APDUSPEC.md

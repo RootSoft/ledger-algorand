@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:ledger_algorand/ledger_algorand.dart';
-import 'package:ledger_flutter/ledger.dart';
+import 'package:ledger_flutter/ledger_flutter.dart';
 
 /// A [LedgerApp] used to perform BLE operations on a ledger [Algorand]
 /// application.

@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:ledger_algorand/src/algorand_version.dart';
-import 'package:ledger_flutter/ledger.dart';
+import 'package:ledger_flutter/ledger_flutter.dart';
 
 /// GET VERSION APDU PROTOCOL:
 ///
