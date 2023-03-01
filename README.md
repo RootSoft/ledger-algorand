@@ -23,7 +23,7 @@
 
 ## Overview
 
-The Ledger Nano X is the perfect hardware wallet for managing your crypto & NFTs on the go.
+Ledger Nano devices are the perfect hardware wallets for managing your crypto & NFTs on the go.
 This Flutter package is a plugin for the [ledger_flutter](https://pub.dev/packages/ledger_flutter) package to get accounts and sign transactions using the Algorand blockchain.
 
 ### Web3 Ecosystem Integrations
@@ -33,7 +33,6 @@ Check out our other Web3 packages below:
 
 - [Ledger](https://pub.dev/packages/ledger_flutter)
 - [WalletConnect](https://pub.dev/packages/walletconnect_dart)
-- [Reach](https://pub.dev/packages/reach_dart)
 - [Algorand](https://pub.dev/packages/algorand_dart)
 
 ## Getting started
@@ -100,7 +99,12 @@ Our top sponsors are shown below!
     <tbody>
         <tr>
             <td align="center" style="background-color: white">
+                <a href="https://defly.app/"><img src="https://play-lh.googleusercontent.com/Qr5ob7KMKf7gfxR4sQOCzs4LKi3pjCbbIBi7MkevWVP6SrEhS2vjDaqzDXyr9xWAYRMz=w240-h480-rw" width="225"/></a>
+                <p><a href="https://defly.app/"><strong>Defly</strong></a></p>
+            </td>
+            <td align="center" style="background-color: white">
                 <a href="https://blockshake.io/"><img src="https://pbs.twimg.com/profile_images/1491803720593522691/7jXDOpGn_400x400.png" width="225"/></a>
+                <p><a href="https://blockshake.io/"><strong>Blockshake</strong></a></p>
             </td>
         </tr>
     </tbody>
